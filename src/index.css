@@ -1,13 +1,147 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f7f9fc;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #22234b;
+  color: #fff600; /* bright yellow for all navbar text */
+  padding: 1rem 2rem;
+  border-bottom: 3px solid #ff00ff; /* magenta border for visibility */
+  box-shadow: 0 4px 12px rgba(255, 246, 0, 0.2);
+}
+
+.navbar__logo {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #00ffea; /* neon cyan for logo */
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 6px #fff, 0 0 10px #00ffea;
+}
+
+.navbar__links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__links li a {
+  color: #fff600; /* bright yellow (neon) */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+
+.navbar__links li a:hover {
+  color: #00ffea; /* neon cyan on hover */
+}
+
+.navbar__actions .btn {
+  margin-left: 1rem;
+  background: #fff600; /* neon yellow */
+  color: #22234b;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  font-weight: bold;
+  box-shadow: 0 2px 4px #fff60088;
+}
+
+.navbar__actions .btn.signin {
+  background: transparent;
+  color: #00ffea;
+  border: 2px solid #00ffea;
+}
+
+.navbar__actions .btn:hover {
+  background: #22234b;
+  color: #fff600;
+  border: 2px solid #fff600;
+}
+
+.landing {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.landing h1 {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+  color: #22234b;
+}
+
+.landing p {
+  color: #555;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .navbar__links {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar__links {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    width: 100%;
+  }
+  .navbar__actions {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .landing {
+    padding: 2rem 1rem;
+  }
+  .landing h1 {
+    font-size: 2rem;
+  }
+}
+.form-page {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+.auth-form {
+  display: inline-block;
+  margin-top: 2rem;
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #22234b22;
+}
+.auth-form input {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.7rem 1rem;
+  width: 220px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+.auth-form button {
+  width: 100%;
+  margin-top: 1rem;
 }
