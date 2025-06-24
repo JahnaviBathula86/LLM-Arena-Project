@@ -3,8 +3,14 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import sqlalchemy
 import databases
+import os
+from dotenv import load_dotenv
 
-DATABASE_URL = "sqlite+aiosqlite:///./test.db"
+# Load environment variables from .env
+load_dotenv()
+
+# Use DATABASE_URL from .env; fallback to SQLite if not set
+DATABASE_URL = os.getenv("DATABASE_URL", "sqlite+aiosqlite:///./test.db")
 database = databases.Database(DATABASE_URL)
 metadata = sqlalchemy.MetaData()
 
@@ -16,11 +22,16 @@ users = sqlalchemy.Table(
     sqlalchemy.Column("password", sqlalchemy.String),
 )
 
-engine = sqlalchemy.create_engine(
-    DATABASE_URL.replace("aiosqlite", "pysqlite"), connect_args={"check_same_thread": False}
-)
+# For SQLAlchemy engine, handle both SQLite and PostgreSQL
+if DATABASE_URL.startswith("sqlite"):
+    engine = sqlalchemy.create_engine(
+        DATABASE_URL.replace("aiosqlite", "pysqlite"), connect_args={"check_same_thread": False}
+    )
+else:
+    sync_db_url = DATABASE_URL.replace("asyncpg", "psycopg2")
+engine = sqlalchemy.create_engine(sync_db_url)
 metadata.create_all(engine)
-
+   
 app = FastAPI()
 
 app.add_middleware(
