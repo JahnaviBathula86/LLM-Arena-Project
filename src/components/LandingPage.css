@@ -1,0 +1,281 @@
+:root {
+  --primary-bg: #161a23;
+  --secondary-bg: #222738;
+  --accent: #5ddcff;
+  --accent2: #b967ff;
+  --text-main: #e6e6e6;
+  --text-light: #b0b9ca;
+  --feature-bg: #20243a;
+  --border-radius: 14px;
+  --transition: 0.3s;
+}
+
+body, .llmarena-root {
+  background: var(--primary-bg);
+  color: var(--text-main);
+  font-family: Arial, system-ui, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--accent2);
+}
+
+.navbar {
+  background: var(--secondary-bg);
+  padding: 0.6rem 0;
+  box-shadow: 0 2px 12px #1112;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 92%;
+  margin: auto;
+}
+
+.logo {
+  height: 38px;
+  width: 38px;
+  margin-right: 0.8rem;
+  vertical-align: middle;
+}
+
+.brand-group {
+  display: flex;
+  align-items: center;
+}
+
+.site-title {
+  font-family: 'Truculenta', Arial, sans-serif;
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: var(--accent);
+  margin-right: 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.signup-btn, .signin-btn {
+  margin-left: 1rem;
+  padding: 9px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+
+.signup-btn {
+  background: var(--accent);
+  color: #181c24;
+}
+
+.signup-btn:hover {
+  background: var(--accent2);
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.signin-btn {
+  background: var(--secondary-bg);
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
+}
+
+.signin-btn:hover {
+  background: var(--accent2);
+  color: #fff;
+  border-color: var(--accent2);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.hero {
+  padding: 5rem 0 3rem;
+  text-align: center;
+  background: linear-gradient(140deg, var(--secondary-bg) 60%, var(--primary-bg) 100%);
+}
+
+.hero h1 {
+  font-family: 'Truculenta', Arial, sans-serif;
+  font-size: 2.7rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: var(--accent2);
+}
+
+.hero .highlight {
+  color: var(--accent);
+}
+
+.hero .subtitle {
+  color: var(--text-light);
+  font-size: 1.25rem;
+  margin-bottom: 2.2rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  color: #181c24;
+  font-weight: 800;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.85rem 2.2rem;
+  font-size: 1.15rem;
+  cursor: pointer;
+  box-shadow: 0 6px 28px #5ddcff33;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+
+.cta-btn:hover {
+  background: linear-gradient(90deg, var(--accent2), var(--accent));
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.features {
+  padding: 3.5rem 0 2rem;
+}
+
+.features h2 {
+  font-family: 'Truculenta', Arial, sans-serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--accent);
+  text-align: center;
+}
+
+.feature-list {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.feature {
+  background: var(--feature-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 20px #1115;
+  padding: 2.2rem 1.7rem;
+  min-width: 240px;
+  max-width: 330px;
+  flex: 1 1 260px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.feature:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 36px #5ddcff22;
+}
+
+.feature h3 {
+  font-family: 'Truculenta', Arial, sans-serif;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--accent2);
+}
+
+.feature p {
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+.about, .contact {
+  padding: 2.5rem 0;
+  text-align: center;
+}
+
+.about h2, .contact h2 {
+  font-family: 'Truculenta', Arial, sans-serif;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.about p, .contact p {
+  color: var(--text-main);
+  font-size: 1.05rem;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.contact a {
+  color: var(--accent2);
+  text-decoration: underline;
+}
+
+footer {
+  background: var(--secondary-bg);
+  padding: 1.5rem 0 1rem;
+  text-align: center;
+  color: var(--text-light);
+  font-size: 0.97rem;
+  letter-spacing: 0.05em;
+  margin-top: 2.5rem;
+  border-top: 1px solid #232844;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .feature-list {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar-container {
+    width: 98%;
+    padding: 0 1vw;
+  }
+  .navbar {
+    padding: 0.5rem 0;
+  }
+  .site-title {
+    font-size: 1.25rem;
+    margin-right: 1rem;
+  }
+  .nav-links {
+    gap: 1rem;
+    font-size: 0.98rem;
+  }
+  .hero {
+    padding: 3rem 0 2rem;
+  }
+  .features {
+    padding: 2.2rem 0 1.2rem;
+  }
+  .feature {
+    padding: 1.5rem 1rem;
+    min-width: 170px;
+    max-width: 98vw;
+  }
+}
