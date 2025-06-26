@@ -177,10 +177,13 @@ a:hover {
 }
 
 .feature-list {
-  display: flex;
+ display: flex;
   gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
+  /* Optional: Max width to keep content centered on large screens */
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .feature {

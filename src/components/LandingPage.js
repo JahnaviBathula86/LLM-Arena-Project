@@ -42,6 +42,18 @@ const LandingPage = ({ onSignUp, onSignIn }) => (
             <h3>Community Insights</h3>
             <p>Share your findings, vote on models, and collaborate with AI enthusiasts worldwide.</p>
           </div>
+           <div className="feature">
+    <h3>Notebooks</h3>
+    <p>Write your own notes from LLM responses and store them in your user profile.</p>
+  </div>
+  <div className="feature">
+    <h3>Export as PDF</h3>
+    <p>Download LLM responses directly as PDF for offline use and sharing.</p>
+  </div>
+  <div className="feature">
+    <h3>Share Button</h3>
+    <p>Share LLM responses instantly with others via a direct link.</p>
+  </div>
         </div>
       </section>
       <section id="about" className="about">
