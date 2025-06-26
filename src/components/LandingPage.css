@@ -29,12 +29,22 @@ a:hover {
 }
 
 .navbar {
-  background: var(--secondary-bg);
-  padding: 0.6rem 0;
+  height: 60px;                        /* Fixed height */
+  background: var(--secondary-bg, #222738);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
   box-shadow: 0 2px 12px #1112;
   position: sticky;
   top: 0;
   z-index: 99;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .navbar-container {
@@ -45,11 +55,14 @@ a:hover {
   margin: auto;
 }
 
-.logo {
-  height: 38px;
-  width: 38px;
+.navbar-logo {
+  max-height: 100px;                    /* Always fits inside navbar */
+  max-width: 100px;
+  width: auto;
   margin-right: 0.8rem;
-  vertical-align: middle;
+  display: block;
+  object-fit: contain;
+   margin-top: 15px;
 }
 
 .brand-group {
@@ -57,15 +70,16 @@ a:hover {
   align-items: center;
 }
 
-.site-title {
+.navbar-title {
   font-family: 'Truculenta', Arial, sans-serif;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 900;
-  color: var(--accent);
-  margin-right: 0;
+  color: var(--accent, #5ddcff);
+  letter-spacing: 0.04em;
 }
 
-.nav-links {
+
+.navbar-links {
   display: flex;
   align-items: center;
   gap: 1.2rem;

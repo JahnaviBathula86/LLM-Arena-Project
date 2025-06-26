@@ -1,23 +1,21 @@
 import React from "react";
 import "./LandingPage.css";
-
 const LandingPage = ({ onSignUp, onSignIn }) => (
   <div className="llmarena-root">
     <nav className="navbar">
-        <div className="navbar-container">
-  <div className="brand-group">
-    <img src="/logo192.png" alt="LLMArena Logo" className="logo" />
-    <span className="site-title">LLMArena</span>
-  </div>
-        <div className="nav-links">
-          <a href="#features">Features</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-          <button className="signup-btn" onClick={onSignUp}>Sign Up</button>
-          <button className="signin-btn" onClick={onSignIn}>Sign In</button>
-        </div>
+      <div className="navbar-brand">
+        <img src="/logo.png" alt="LLMArena Logo" className="navbar-logo" />
+        <span className="navbar-title">LLMArena</span>
+      </div>
+      <div className="navbar-links">
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <button className="signup-btn" onClick={onSignUp}>Sign Up</button>
+        <button className="signin-btn" onClick={onSignIn}>Sign In</button>
       </div>
     </nav>
+
     <header className="hero">
       <h1>
         Welcome to <span className="highlight">LLMArena</span>
