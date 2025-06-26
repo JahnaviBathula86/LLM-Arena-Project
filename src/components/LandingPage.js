@@ -1,5 +1,6 @@
 import React from "react";
 import "./LandingPage.css";
+import ContactSection from "./ContactSection";
 const LandingPage = ({ onSignUp, onSignIn }) => (
   <div className="llmarena-root">
     <nav className="navbar">
@@ -11,6 +12,7 @@ const LandingPage = ({ onSignUp, onSignIn }) => (
         <a href="#features">Features</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
+        <a href="#reviews">Reviews</a>
         <button className="signup-btn" onClick={onSignUp}>Sign Up</button>
         <button className="signin-btn" onClick={onSignIn}>Sign In</button>
       </div>
@@ -59,14 +61,55 @@ const LandingPage = ({ onSignUp, onSignIn }) => (
       <section id="about" className="about">
         <h2>About LLMArena</h2>
         <p>
-          LLMArena is designed for developers, researchers, and anyone curious about the latest in language models.
-          Our mission is to make AI more accessible, transparent, and collaborative.
+         LLMArena is a modern platform built for developers, researchers, and AI enthusiasts 
+         who want to explore, compare, and get hands-on with the latest large language models. 
+         Whether you’re benchmarking models, experimenting with prompts, or discovering new insights, 
+         LLMArena makes advanced AI accessible, transparent, and collaborative. Join a growing community 
+         and unlock the full potential of language models with powerful tools and intuitive features.
         </p>
       </section>
-      <section id="contact" className="contact">
-        <h2>Contact</h2>
-        <p>Questions? Feedback? <a href="mailto:info@llmarena.com">Email us</a> anytime.</p>
-      </section>
+      <section id="reviews" className="reviews-section">
+  <h2 className="reviews-title">What Our Users Say</h2>
+  <div className="reviews-bubbles">
+    <div className="review-bubble">
+      <div className="review-avatar" style={{ background: "linear-gradient(135deg, var(--accent2), var(--accent))" }}>
+        <span>🌟</span>
+      </div>
+      <div className="bubble-content">
+        <p>
+          “LLMArena’s interface is so intuitive! Comparing model responses has never been easier.”
+        </p>
+        <span className="review-author">— Priya M.</span>
+      </div>
+    </div>
+    <div className="review-bubble">
+      <div className="review-avatar" style={{ background: "linear-gradient(135deg, #ff7eb3, #fa5a7d)" }}>
+        <span>👩‍💻</span>
+      </div>
+      <div className="bubble-content">
+        <p>
+          “The notebook and export features save me hours every week. Highly recommended for researchers.”
+        </p>
+        <span className="review-author">— Alex F.</span>
+      </div>
+    </div>
+    <div className="review-bubble">
+      <div className="review-avatar" style={{ background: "linear-gradient(135deg, var(--accent), #ff5fa2)" }}>
+        <span>🚀</span>
+      </div>
+      <div className="bubble-content">
+        <p>
+          “Love the vibrant community and instant sharing. LLMArena is my go-to for LLM experiments!”
+        </p>
+        <span className="review-author">— Dr. S. Kumar</span>
+      </div>
+    </div>
+  </div>
+</section> 
+      
+<ContactSection />
+
+      
     </main>
     <footer>
       <p>&copy; 2025 LLMArena. All rights reserved.</p>
