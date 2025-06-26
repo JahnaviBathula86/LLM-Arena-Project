@@ -1,13 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import LandingPage from "./components/LandingPage";
+import SignInPage from "./components/SignInPage"; // <-- import the Sign In page
 
 function App() {
-  // Replace the functions below with your actual sign up/in logic
+  const [showSignIn, setShowSignIn] = useState(false);
+
   const handleSignUp = () => alert("Sign Up clicked!");
-  const handleSignIn = () => alert("Sign In clicked!");
+  const handleSignIn = () => setShowSignIn(true);
+  const handleSwitchToLanding = () => setShowSignIn(false);
+  const handleSignInSubmit = (form) => {
+    alert(`Sign In: ${form.email} / ${form.password}`);
+    // You can set user as logged in here and redirect as needed.
+  };
 
   return (
-    <LandingPage onSignUp={handleSignUp} onSignIn={handleSignIn} />
+    <>
+      {showSignIn ? (
+        <SignInPage
+          onSignIn={handleSignInSubmit}
+          onSwitchToSignUp={handleSwitchToLanding}
+        />
+      ) : (
+        <LandingPage onSignUp={handleSignUp} onSignIn={handleSignIn} />
+      )}
+    </>
   );
 }
 
