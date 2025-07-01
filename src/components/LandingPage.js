@@ -11,8 +11,9 @@ const LandingPage = ({ onSignUp, onSignIn }) => (
       <div className="navbar-links">
         <a href="#features">Features</a>
         <a href="#about">About</a>
-        <a href="#contact">Contact</a>
         <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+        
         <button className="signup-btn" onClick={onSignUp}>Sign Up</button>
         <button className="signin-btn" onClick={onSignIn}>Sign In</button>
       </div>
@@ -26,7 +27,9 @@ const LandingPage = ({ onSignUp, onSignIn }) => (
         The ultimate platform to explore, compare, and interact with Large Language Models.<br />
         Fast, interactive, and always up-to-date.
       </p>
-      <a href="#features" className="cta-btn">Get Started</a>
+      <button className="cta-btn" onClick={onSignUp}>
+  Get Started
+</button>
     </header>
     <main>
       <section id="features" className="features">
