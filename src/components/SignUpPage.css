@@ -22,8 +22,6 @@
 .background-gradient {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 80% 20%, #5ddcff44 0%, transparent 60%),
-              radial-gradient(circle at 20% 80%, #f857a644 0%, transparent 60%);
   z-index: 0;
 }
 
@@ -31,7 +29,7 @@
   z-index: 1;
   background: var(--card-bg, #23263a);
   color: var(--text, #fff);
-  padding: 2.8rem 2.2rem 2.4rem 2.2rem;
+  padding: 2rem 1.6rem 1.7rem 1.6rem;
   border-radius: 1.3rem;
   box-shadow: 0 6px 48px #111a;
   width: 100%;
@@ -76,7 +74,7 @@ h2 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 0.7rem;
 }
 
 .signup-form input[type="email"],

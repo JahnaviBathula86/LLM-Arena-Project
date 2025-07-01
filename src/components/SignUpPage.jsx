@@ -76,13 +76,13 @@ const SignUpPage = ({ onSignUp, onSwitchToSignIn }) => {
             >
               {showPassword ? (
                 // Eye Closed SVG
-                <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
-                  <path d="M1 1l22 22M17.94 17.94A9.77 9.77 0 0112 19c-7 0-10-7-10-7a19.05 19.05 0 014.11-5.91M9.53 9.53A3 3 0 0112 9a3 3 0 013 3c0 .47-.12.91-.33 1.29M4.22 4.22A9.77 9.77 0 0112 5c7 0 10 7 10 7a19.05 19.05 0 01-4.11 5.91" stroke="#aaa" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+               <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
+                  <path d="M12 5c-7 0-10 7-10 7s3 7 10 7 10-7 10-7-3-7-10-7zm0 12c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8a3 3 0 100 6 3 3 0 000-6z" fill="#aaa"/>
                 </svg>
               ) : (
                 // Eye Open SVG
-                <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
-                  <path d="M12 5c-7 0-10 7-10 7s3 7 10 7 10-7 10-7-3-7-10-7zm0 12c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8a3 3 0 100 6 3 3 0 000-6z" fill="#aaa"/>
+               <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
+                  <path d="M1 1l22 22M17.94 17.94A9.77 9.77 0 0112 19c-7 0-10-7-10-7a19.05 19.05 0 014.11-5.91M9.53 9.53A3 3 0 0112 9a3 3 0 013 3c0 .47-.12.91-.33 1.29M4.22 4.22A9.77 9.77 0 0112 5c7 0 10 7 10 7a19.05 19.05 0 01-4.11 5.91" stroke="#aaa" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               )}
             </button>
@@ -98,24 +98,24 @@ const SignUpPage = ({ onSignUp, onSwitchToSignIn }) => {
               required
             />
             <button
-              type="button"
-              className="toggle-password"
-              onClick={() => setShowConfirm((v) => !v)}
-              tabIndex={-1}
-              aria-label={showConfirm ? "Hide password" : "Show password"}
-            >
-              {showConfirm ? (
-                // Eye Closed SVG
-                <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
-                  <path d="M1 1l22 22M17.94 17.94A9.77 9.77 0 0112 19c-7 0-10-7-10-7a19.05 19.05 0 014.11-5.91M9.53 9.53A3 3 0 0112 9a3 3 0 013 3c0 .47-.12.91-.33 1.29M4.22 4.22A9.77 9.77 0 0112 5c7 0 10 7 10 7a19.05 19.05 0 01-4.11 5.91" stroke="#aaa" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              ) : (
-                // Eye Open SVG
-                <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
-                  <path d="M12 5c-7 0-10 7-10 7s3 7 10 7 10-7 10-7-3-7-10-7zm0 12c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8a3 3 0 100 6 3 3 0 000-6z" fill="#aaa"/>
-                </svg>
-              )}
-            </button>
+  type="button"
+  className="toggle-password"
+  onClick={() => setShowConfirm((v) => !v)}
+  tabIndex={-1}
+  aria-label={showConfirm ? "Hide password" : "Show password"}
+>
+  {showConfirm ? (
+    // Eye Open SVG (Show password)
+    <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
+      <path d="M12 5c-7 0-10 7-10 7s3 7 10 7 10-7 10-7-3-7-10-7zm0 12c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8a3 3 0 100 6 3 3 0 000-6z" fill="#aaa"/>
+    </svg>
+  ) : (
+    // Eye Closed SVG (Hide password)
+    <svg width="22" height="22" fill="none" viewBox="0 0 24 24">
+      <path d="M1 1l22 22M17.94 17.94A9.77 9.77 0 0112 19c-7 0-10-7-10-7a19.05 19.05 0 014.11-5.91M9.53 9.53A3 3 0 0112 9a3 3 0 013 3c0 .47-.12.91-.33 1.29M4.22 4.22A9.77 9.77 0 0112 5c7 0 10 7 10 7a19.05 19.05 0 01-4.11 5.91" stroke="#aaa" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+  )}
+</button>
           </div>
           {error && <div className="form-error">{error}</div>}
           <button type="submit" className="primary-btn">
